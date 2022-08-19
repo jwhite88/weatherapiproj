@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/weatherapiproj/static/css/main.d9540baa.css",
+    "main.js": "/weatherapiproj/static/js/main.c2528b8d.js",
+    "static/js/787.c4b51a61.chunk.js": "/weatherapiproj/static/js/787.c4b51a61.chunk.js",
+    "index.html": "/weatherapiproj/index.html",
+    "main.d9540baa.css.map": "/weatherapiproj/static/css/main.d9540baa.css.map",
+    "main.c2528b8d.js.map": "/weatherapiproj/static/js/main.c2528b8d.js.map",
+    "787.c4b51a61.chunk.js.map": "/weatherapiproj/static/js/787.c4b51a61.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9540baa.css",
+    "static/js/main.c2528b8d.js"
+  ]
+}
