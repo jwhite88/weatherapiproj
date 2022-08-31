@@ -8,7 +8,7 @@ function App() {
   const [degreeForC, setDegreeForC] = useState("imperial")
   const [weatherData, setWeatherData] = useState<WeatherData[] | null>(null)
   return (
-    <div className=" text-center ">
+    <div className=" text-center sky-img ">
       <WeatherContext.Provider value={{ degreeForC, setDegreeForC, weatherData, setWeatherData }}>
         <Header />
         <Main />

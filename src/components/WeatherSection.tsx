@@ -5,11 +5,11 @@ import WeatherContext from '../utils/WeatherContext';
 function WeatherSection() {
   const { degreeForC, setDegreeForC, weatherData, setWeatherData } = useContext(WeatherContext);
 
-// sky-img 
+// CSS Clasess: sky-img bg-blue-300
 
   return (
-    <div className='sky-img grow-[3] bg-blue-300 pt-2 '>
-          WeatherSection
+    <div className=' grow-[3]  pt-2 '>
+          <h2>Five Day Weather</h2>
           <div className='flex justify-around flex-wrap gap-1 pt-8'>
               {
                 weatherData?.map((w, idx) => { 

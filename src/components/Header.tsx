@@ -47,7 +47,7 @@ function Header() {
   }, [city])
 
   return (
-    <div className="flex flex-row justify-between py-[10px] px-[40px] bg-gradient-to-r from-cyan-700 to-blue-900 ">
+    <div className="flex flex-row justify-between py-[10px] px-[40px] bg-gradient-to-r from-cyan-700/75 to-blue-900/50 ">
       <div>
         <span>Icon</span>
       </div>
