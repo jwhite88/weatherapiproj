@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/weatherapiproj/static/css/main.d35a3eac.css",
-    "main.js": "/weatherapiproj/static/js/main.132e1ff1.js",
+    "main.css": "/weatherapiproj/static/css/main.63e2cc83.css",
+    "main.js": "/weatherapiproj/static/js/main.7a3f329e.js",
     "static/js/787.c4b51a61.chunk.js": "/weatherapiproj/static/js/787.c4b51a61.chunk.js",
     "static/media/vecteezy_blue-sky-skyscape-02.jpg": "/weatherapiproj/static/media/vecteezy_blue-sky-skyscape-02.d82ecaafc4bd7bf1c9a2.jpg",
     "static/media/FiveDay-02.png": "/weatherapiproj/static/media/FiveDay-02.a527257dabaa1dbaae28.png",
     "index.html": "/weatherapiproj/index.html",
-    "main.d35a3eac.css.map": "/weatherapiproj/static/css/main.d35a3eac.css.map",
-    "main.132e1ff1.js.map": "/weatherapiproj/static/js/main.132e1ff1.js.map",
+    "main.63e2cc83.css.map": "/weatherapiproj/static/css/main.63e2cc83.css.map",
+    "main.7a3f329e.js.map": "/weatherapiproj/static/js/main.7a3f329e.js.map",
     "787.c4b51a61.chunk.js.map": "/weatherapiproj/static/js/787.c4b51a61.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d35a3eac.css",
-    "static/js/main.132e1ff1.js"
+    "static/css/main.63e2cc83.css",
+    "static/js/main.7a3f329e.js"
   ]
 }
