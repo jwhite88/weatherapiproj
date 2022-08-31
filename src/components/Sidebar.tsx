@@ -2,9 +2,9 @@ import React, { ReactElement } from 'react'
 
 function Sidebar(): ReactElement  {
   return (
-      <div className='grow-[1] bg-amber-100 '>
+      <div className='basis-56 bg-amber-100 '>
           Sidebar
-         <div className=' text-left pl-3'>
+         <div className=' text-left pl-4'>
               <ul>
                   <li>Los Angles City is Great</li>
                   <li>2</li>

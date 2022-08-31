@@ -1,19 +1,67 @@
-import React from 'react'
+import React, { useContext, useState, useCallback, useRef } from 'react'
+import WeatherContext from '../utils/WeatherContext'
+import { searchCityTemps } from '../utils/weathersearch'
+
 
 function Header() {
+  const { degreeForC, setDegreeForC, weatherData, setWeatherData } = useContext(WeatherContext);
+ const [city, setCity] = useState<string>("")
+ const inputRef = useRef<HTMLInputElement>(null)
+
+  // console.log({ degreeForC })
+
+  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+    console.log({city})
+    const returnedTemps = searchCityTemps(city as string, degreeForC as string);
+   console.log('inputRef ', inputRef.current?.value)
+    returnedTemps.then((response) => { 
+  
+      const resultArr = []
+      if (response.status === 200) {
+        console.log('response:', response.data)
+
+        for (let i = 0; i < response.data.list.length; i += 8) {
+          // console.log(response.data.list[i])
+          let obj = {
+            temp: response.data.list[i].main.temp,
+            feelsLike: response.data.list[i].main.feels_like,
+            humidity: response.data.list[i].main.humidity,
+            description: response.data.list[i].weather[0].description,
+            icon: response.data.list[i].weather[0].icon,
+            windSpeed: response.data.list[i].wind.speed,
+            dateTxt: response.data.list[i].dt_txt,
+            dt: response.data.list[i].dt,
+            city: response.data.city.name
+          }
+
+          resultArr.push(obj)
+        }
+      }
+
+
+      setWeatherData(resultArr)
+      inputRef.current!.value = ''
+
+     })
+  }, [city])
+
   return (
-    <div className="flex flex-row justify-between py-[10px] px-[40px] bg-sky-500">
+    <div className="flex flex-row justify-between py-[10px] px-[40px] bg-gradient-to-r from-cyan-700 to-blue-900 ">
       <div>
         <span>Icon</span>
       </div>
       <div>
-        <input type="text" className=" rounded-sm pl-2" placeholder="Search City" />
+        <form onSubmit={handleSubmit}>
+          <input type="text" value={city} onChange={(e) => setCity(e.target.value)}  className=" rounded-sm pl-2" placeholder="Search City" ref={inputRef} />
+          {/* <button type='submit'>Temp</button> */}
+        </form>
       </div>
       <div>
         <span></span>
-        <select className='rounded-sm px-1'>
-          <option>F</option>
-          <option>C</option>
+        <select value={degreeForC as string} onChange={(e) => setDegreeForC(e.target.value)} className='rounded-sm px-1'>
+          <option value="imperial">F</option>
+          <option value="metric">C</option>
         </select>
       </div>
     </div>

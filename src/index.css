@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Handlee&family=M+PLUS+Rounded+1c&family=Michroma&family=Montserrat+Alternates&family=Open+Sans&family=Play&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -16,3 +18,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.sky-img {
+  background-image: url('./assets/pexels-01.jpg');
+  background-size: cover;
+}
+
+/* .sky-img::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  opacity: 0.25;
+} */
