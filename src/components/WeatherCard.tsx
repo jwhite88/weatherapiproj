@@ -45,7 +45,7 @@ function WeatherCard({ temp, feelsLike, humidity, description, icon, windSpeed, 
   }, [dt])
 
   return (
-    <div className="w-[200px] h-[290px]  border-offblack-200 rounded-xl relative before:bg-offblack-600/[0.55] before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-xl  mb-5 font-bold tracking-wider text-[#fff]" style={{ fontFamily: "Handlee"}}>
+    <div className="w-[200px] h-[290px]  border-offblack-200 rounded-xl relative before:bg-offblack-600/[0.55] hover:before:bg-offblack-600/[0.75] before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-xl  mb-5 font-bold tracking-wider text-[#fff]" style={{ fontFamily: "Handlee"}}>
       <h4 className="relative pt-4 text-3xl text-[#ec6e4c]/[0.90] ">{city}</h4>
       <span className="relative inline-block text-center">
         <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt='' />
