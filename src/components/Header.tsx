@@ -1,6 +1,7 @@
 import React, { useContext, useState, useCallback, useRef } from 'react'
 import WeatherContext from '../utils/WeatherContext'
 import { searchCityTemps } from '../utils/weathersearch'
+import fiveday from '../assets/FiveDay-02.png'
 
 
 function Header() {
@@ -47,19 +48,19 @@ function Header() {
   }, [city])
 
   return (
-    <div className="flex flex-row justify-between py-[10px] px-[40px] bg-gradient-to-r from-cyan-700/75 to-blue-900/50 ">
-      <div>
-        <span>Icon</span>
+    <div className="flex flex-row justify-between items-center py-[10px] px-[40px] bg-gradient-to-r from-cyan-700/75 to-blue-900/50 ">
+      <div className='max-h-[52px] relative'>
+       <img src={fiveday} className="h-[6rem] relative bottom-[25px]" alt="Five Day" />
       </div>
       <div>
         <form onSubmit={handleSubmit}>
-          <input type="text" value={city} onChange={(e) => setCity(e.target.value)}  className=" rounded-sm pl-2" placeholder="Search City" ref={inputRef} />
+          <input type="text" value={city} onChange={(e) => setCity(e.target.value)}  className=" rounded-[5px] pl-4 text-xl" placeholder="Search City" ref={inputRef} />
           {/* <button type='submit'>Temp</button> */}
         </form>
       </div>
       <div>
         <span></span>
-        <select value={degreeForC as string} onChange={(e) => setDegreeForC(e.target.value)} className='rounded-sm px-1'>
+        <select value={degreeForC as string} onChange={(e) => setDegreeForC(e.target.value)} className='rounded-sm px-1 text-xl'>
           <option value="imperial">F</option>
           <option value="metric">C</option>
         </select>

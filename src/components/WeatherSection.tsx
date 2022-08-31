@@ -9,7 +9,7 @@ function WeatherSection() {
 
   return (
     <div className=' grow-[3]  pt-2 '>
-          <h2>Five Day Weather</h2>
+          <h2 className="pt-2 text-6xl font-bold text-[#f0f0f3]" style={{fontFamily: "Varela Round"}}>Five Day Weather</h2>
           <div className='flex justify-around flex-wrap gap-1 pt-8'>
               {
                 weatherData?.map((w, idx) => { 
