@@ -3,6 +3,8 @@ import WeatherContext from '../utils/WeatherContext'
 
 import { WeatherData } from '../utils/WeatherContext'
 
+const degree = "\u00B0"
+
 function WeatherCard({ temp, feelsLike, humidity, description, icon, windSpeed, dateTxt, dt, city }: WeatherData) {
   const { degreeForC, setDegreeForC, weatherData, setWeatherData } = useContext(WeatherContext);
   const [day, setDay] = useState('')
@@ -50,7 +52,7 @@ function WeatherCard({ temp, feelsLike, humidity, description, icon, windSpeed, 
       <span className="relative inline-block text-center">
         <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt='' />
       </span>
-      <span className='relative block text-center text-2xl'>{degreeForC === 'imperial' ? (Math.round(temp * 1.8 - 459.67)) : (Math.round(temp - 273.15))}&#176;</span>
+      <span className='relative block text-center text-2xl'>{degreeForC === 'imperial' ? (Math.round(temp * 1.8 - 459.67)) + `${degree} F` : (Math.round(temp - 273.15)) + `${degree} C`}</span>
       <h3 className="relative text-left pl-5 text-xl pb-1 pt-2">{day && day}</h3>
       <p className='relative capitalize text-left pl-5 text-xl pb-2'>
         {description}
